@@ -1,81 +1,80 @@
-*{
-  box-sizing: border-box;
-  padding: 0%;
-  margin: 0;
-}
-
 body{
-
-  background: #333;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.page-heading{
-  color: #eee;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  text-decoration: underline;
+.services {
+  padding-top: 5rem;
 }
 
-.alignment{
+.services .container{
+  max-width: 1220px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 10rem 10rem;
+}
+
+
+.service{
+  grid-column-start: span 2;
+}
+
+.service-wraper{
+  position: relative;
+  width: 168px;
+}
+
+.service__number{
+  position: absolute;
+  right: -1rem;
+  top: -3rem;
+  font-size: 6.5rem;
+  font-weight: 900;
+  z-index: -1;
+  color: #f4f6fd;
+  transition: color 0.5s ease-in-out;
+
+}
+
+.service-wraper:hover .service__number{
+  color: rgb(255, 66, 0);
+}
+
+.octagon{
+  position: absolute;
+  width: 168px;
+  height: 188px;
+  fill: #fff;
+  filter: drop-shadow(7px 5px 30px rgba(72,73,121,0.15));
+  transition: fill 0.5s ease-in-out;
+  transition: filter 0.6s ease-in-out;
+}
+
+.service-wraper:hover .octagon{
+  fill: #f4f6fd;
+  filter: drop-shadow(7px 5px 30px rgba(255,255,255,1));
+}
+
+
+
+.service__container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 168px;
+  height: 188px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.conta{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.1);
-  transform: rotate(0deg);
-  /* top: 10rem; */
-  /* left: 50%; */
-  
+.content__icon img{
+  width: 4rem;
+  height: 4rem;
 }
 
-.conta:hover{
-	animation: demo 5s linear infinite;
+.content__title h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
 }
-  
-@keyframes demo {
-  from{
-    transform: rotate(-360deg);
-  } 
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-
-.octagon{
-	position: absolute;
-  width: 25px;
-	height: 25px;
-	transform: rotate(0);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-
-}
-
-
-.octa1 {
-	top: 4px;   
-	left: 140px;   
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-}
-
-.octa2 {
-	top: 170px;  
-	left: 25px;   
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-}
-
-
-
-
-
-
-
